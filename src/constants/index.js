@@ -228,3 +228,122 @@ export const CONTACT_CONTENT = {
     }
   ]
 };
+
+export const CERTIFICATIONS_CONTENT = {
+  tag: "Certifications",
+  title: "Verified Badges",
+  certifications: [
+    {
+      id: "gcp-bigdata",
+      title: "Google Cloud Fundamentals: Big Data and Machine Learning",
+      issuer: "Google Cloud",
+      date: "2025",
+      icon: "☁️",
+      link: "https://www.credly.com/users/kasidech-chumthong",
+      featured: true
+    },
+    {
+      id: "gcp-gemini",
+      title: "Build Real World AI Applications with Gemini and Imagen",
+      issuer: "Google Cloud",
+      date: "2025",
+      icon: "♊",
+      link: "https://www.credly.com/users/kasidech-chumthong",
+      featured: true
+    },
+    {
+      id: "gcp-secure-delivery",
+      title: "Secure Software Delivery",
+      issuer: "Google Cloud",
+      date: "2025",
+      icon: "🛡️",
+      link: "https://www.credly.com/users/kasidech-chumthong",
+      featured: true
+    },
+    {
+      id: "gcp-k8s",
+      title: "Manage Kubernetes in Google Cloud",
+      issuer: "Google Cloud",
+      date: "2025",
+      icon: "☸️",
+      link: "https://www.credly.com/users/kasidech-chumthong",
+      featured: true
+    },
+    {
+      id: "google-ai-essentials",
+      title: "Google AI Essentials",
+      issuer: "Google",
+      date: "2025",
+      icon: "✨",
+      link: "https://www.credly.com/users/kasidech-chumthong",
+      featured: true
+    },
+    {
+      id: "gcp-vertex-prompt",
+      title: "Prompt Design in Vertex AI",
+      issuer: "Google Cloud",
+      date: "2025",
+      icon: "✍️",
+      link: "https://www.credly.com/users/kasidech-chumthong",
+      featured: true
+    },
+    {
+      id: "gcp-core-infra",
+      title: "Google Cloud Fundamentals: Core Infrastructure",
+      issuer: "Google Cloud",
+      date: "2025",
+      icon: "🏛️",
+      link: "https://www.credly.com/users/kasidech-chumthong"
+    },
+    {
+      id: "google-marketing",
+      title: "Foundations of Digital Marketing and E-commerce",
+      issuer: "Google",
+      date: "2025",
+      icon: "📈",
+      link: "https://www.credly.com/users/kasidech-chumthong"
+    },
+    {
+      id: "gcp-ml-data",
+      title: "Prepare Data for ML APIs on Google Cloud",
+      issuer: "Google Cloud",
+      date: "2025",
+      icon: "📊"
+    },
+    {
+      id: "gcp-biglake",
+      title: "Secure BigLake Data",
+      issuer: "Google Cloud",
+      date: "2025",
+      icon: "🔒"
+    },
+    {
+      id: "gcp-dlp",
+      title: "Protect Sensitive Data with Data Loss Prevention",
+      issuer: "Google Cloud",
+      date: "2025",
+      icon: "🕵️"
+    },
+    {
+      id: "gcp-compute-basics",
+      title: "The Basics of Google Cloud Compute",
+      issuer: "Google Cloud",
+      date: "2025",
+      icon: "⚙️"
+    },
+    {
+      id: "gcp-speech-api",
+      title: "Cloud Speech API: 3 Ways",
+      issuer: "Google Cloud",
+      date: "2025",
+      icon: "🗣️"
+    },
+    {
+      id: "gcp-data-cloud",
+      title: "Share Data Using Google Data Cloud",
+      issuer: "Google Cloud",
+      date: "2025",
+      icon: "🤝"
+    }
+  ]
+};
