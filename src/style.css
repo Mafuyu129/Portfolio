@@ -1497,43 +1497,31 @@ a.contact-card-value:hover {
   }
 }
 
-/* ====== Logo Animation ====== */
+/* ====== Logo Animation (Typing) ====== */
 .nav-logo {
-  position: relative;
-  overflow: hidden;
   display: flex;
   align-items: center;
-  gap: 4px;
+  gap: 2px;
+  font-family: var(--font-mono); /* Monospace looks better for typing */
+  font-size: 1.1rem;
 }
 
-.nav-logo::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 50%;
-  height: 100%;
-  background: linear-gradient(
-    to right,
-    transparent,
-    rgba(255, 255, 255, 0.2),
-    transparent
-  );
-  transform: skewX(-25deg);
-  animation: logoGlint 4s infinite;
+.logo-text {
+  color: var(--text-primary);
+  font-weight: var(--weight-strong);
+}
+
+.logo-cursor {
+  color: var(--brand-indigo);
+  animation: blink 1s step-end infinite;
 }
 
 .logo-bracket {
   color: var(--brand-indigo);
-  animation: bracketPulse 2s infinite alternate ease-in-out;
 }
 
-@keyframes logoGlint {
-  0% { left: -100%; }
-  20%, 100% { left: 200%; }
+@keyframes blink {
+  from, to { opacity: 1; }
+  50% { opacity: 0; }
 }
-
-@keyframes bracketPulse {
-  from { opacity: 0.7; transform: scale(1); }
-  to { opacity: 1; transform: scale(1.1); }
-}
+EOF

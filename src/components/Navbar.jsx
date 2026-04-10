@@ -5,6 +5,7 @@ const Navbar = ({ theme, toggleTheme }) => {
 
   const [scrolled, setScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [logoText, setLogoText] = useState('KC');
 
   useEffect(() => {
     const handleScroll = () => {
@@ -14,14 +15,55 @@ const Navbar = ({ theme, toggleTheme }) => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  useEffect(() => {
+    const fullText = 'Kasidech';
+    let currentIndex = 2; // Start from "KC"
+    let isDeleting = false;
+    let typingSpeed = 200;
+
+    const type = () => {
+      setLogoText((prev) => {
+        if (!isDeleting) {
+          // Typing forwards
+          if (prev.length < fullText.length) {
+            return fullText.slice(0, prev.length + 1);
+          } else {
+            // Finished typing full name, pause then delete
+            isDeleting = true;
+            typingSpeed = 1000; // Long pause
+            return prev;
+          }
+        } else {
+          // Deleting back to "KC"
+          if (prev.length > 2) {
+            typingSpeed = 100;
+            return prev.slice(0, -1);
+          } else {
+            // Back to initials, pause then restart
+            isDeleting = false;
+            typingSpeed = 4000; // Very long pause on "KC"
+            return prev;
+          }
+        }
+      });
+
+      timeoutId = setTimeout(type, typingSpeed);
+    };
+
+    let timeoutId = setTimeout(type, typingSpeed);
+    return () => clearTimeout(timeoutId);
+  }, []);
+
 
 
   return (
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`} id="navbar">
       <div className="nav-container">
         <a href="#hero" className="nav-logo">
-          <span className="logo-bracket">&lt;</span> KC <span className="logo-bracket">/&gt;</span>
-
+          <span className="logo-bracket">&lt;</span>
+          <span className="logo-text">{logoText}</span>
+          <span className="logo-cursor">|</span>
+          <span className="logo-bracket">/&gt;</span>
         </a>
         
         <ul className={`nav-links ${isMenuOpen ? 'open' : ''}`} id="navLinks">
