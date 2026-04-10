@@ -2,8 +2,11 @@ import { useEffect } from 'react';
 
 export const useReveal = () => {
   useEffect(() => {
-    const revealElements = document.querySelectorAll('.reveal-up');
-    
+    const observeElements = () => {
+      const revealElements = document.querySelectorAll('.reveal-up:not(.revealed)');
+      revealElements.forEach(el => revealObserver.observe(el));
+    };
+
     const revealObserver = new IntersectionObserver(
       (entries) => {
         entries.forEach(entry => {
@@ -19,8 +22,22 @@ export const useReveal = () => {
       }
     );
 
-    revealElements.forEach(el => revealObserver.observe(el));
+    // Initial observation
+    observeElements();
 
-    return () => revealObserver.disconnect();
+    // Watch for new elements being added to the DOM (like "Show All Badges")
+    const mutationObserver = new MutationObserver(() => {
+      observeElements();
+    });
+
+    mutationObserver.observe(document.body, {
+      childList: true,
+      subtree: true
+    });
+
+    return () => {
+      revealObserver.disconnect();
+      mutationObserver.disconnect();
+    };
   }, []);
 };
