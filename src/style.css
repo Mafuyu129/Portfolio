@@ -1192,9 +1192,14 @@ a.contact-card-value:hover {
   }
 
   .card-main {
+    grid-column: auto;
     flex-direction: column;
     text-align: center;
     padding: 24px;
+  }
+
+  .about-card-desc {
+    grid-column: auto;
   }
 
   .skills-grid {
