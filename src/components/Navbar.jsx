@@ -19,30 +19,30 @@ const Navbar = ({ theme, toggleTheme }) => {
     const fullText = 'Kasidech';
     let currentIndex = 2; // Start from "KC"
     let isDeleting = false;
-    let typingSpeed = 100; // Faster typing
+    let typingSpeed = 150; // Requested typing speed
 
     const type = () => {
       setLogoText((prev) => {
         if (!isDeleting) {
           // Typing forwards
           if (prev.length < fullText.length) {
-            typingSpeed = 100;
+            typingSpeed = 150; // Requested typing speed
             return fullText.slice(0, prev.length + 1);
           } else {
             // Finished typing full name, pause then delete
             isDeleting = true;
-            typingSpeed = 600; // Shorter pause
+            typingSpeed = 600; 
             return prev;
           }
         } else {
           // Deleting back to "KC"
           if (prev.length > 2) {
-            typingSpeed = 50; // Faster deleting
+            typingSpeed = 75; // Requested deleting speed
             return prev.slice(0, -1);
           } else {
             // Back to initials, pause then restart
             isDeleting = false;
-            typingSpeed = 2000; // Shorter pause on "KC"
+            typingSpeed = 2000; 
             return prev;
           }
         }
