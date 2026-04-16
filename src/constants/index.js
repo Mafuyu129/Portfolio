@@ -173,7 +173,13 @@ export const EXPERIENCE_CONTENT = {
       role: "QA Engineer (Intern)",
       company: "Ascend Commerce",
       period: "Jan 2026 — Apr 2026",
-      desc: "Creating and running automated test scripts for the Amaze app, and assisting with QA documentation.",
+      details: [
+        "Executed end-to-end functional testing for high-traffic Livestreaming platforms to ensure seamless UI and real-time user experience.",
+        "Managed defect lifecycle using JIRA, documenting and reporting bugs while collaborating with developers for resolution.",
+        "Performed data validation using SQL (MySQL, MongoDB) to verify consistency between backend and frontend systems.",
+        "Conducted API testing with Postman to validate technical specifications and ensure stable system integration.",
+        "Developed automated test scripts using Playwright and JavaScript to improve regression coverage and testing efficiency."
+      ],
       badge: "Internship",
       type: "internship"
     },

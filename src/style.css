@@ -984,6 +984,29 @@ img {
   line-height: 1.6;
 }
 
+.timeline-details {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.timeline-details li {
+  font-size: 14px;
+  color: var(--text-tertiary);
+  line-height: 1.6;
+  margin-bottom: 8px;
+  position: relative;
+  padding-left: 18px;
+}
+
+.timeline-details li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--brand-indigo);
+  font-weight: bold;
+}
+
 
 /* ====== Contact Section ====== */
 .contact-grid {

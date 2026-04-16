@@ -20,7 +20,15 @@ const Experience = () => {
                 <h3>{exp.role}</h3>
                 <h4>{exp.company}</h4>
                 <div className="timeline-date">{exp.period}</div>
-                <p>{exp.desc}</p>
+                {exp.details ? (
+                  <ul className="timeline-details">
+                    {exp.details.map((detail, i) => (
+                      <li key={i}>{detail}</li>
+                    ))}
+                  </ul>
+                ) : (
+                  <p>{exp.desc}</p>
+                )}
               </div>
             </div>
           ))}
