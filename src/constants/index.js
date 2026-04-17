@@ -174,9 +174,9 @@ export const EXPERIENCE_CONTENT = {
       company: "Ascend Commerce",
       period: "Jan 2026 — Apr 2026",
       details: [
-        "Executed end-to-end functional testing for high-traffic Livestreaming platforms to ensure seamless UI and real-time user experience.",
+        "Executed end-to-end functional testing for Livestreaming platforms to ensure seamless UI and real-time user experience.",
         "Managed defect lifecycle using JIRA, documenting and reporting bugs while collaborating with developers for resolution.",
-        "Performed data validation using SQL (MySQL, MongoDB) to verify consistency between backend and frontend systems.",
+        "Performed data validation using SQL (MySQL) to verify consistency between backend and frontend systems.",
         "Conducted API testing with Postman to validate technical specifications and ensure stable system integration.",
         "Developed automated test scripts using Playwright and JavaScript to improve regression coverage and testing efficiency."
       ],
