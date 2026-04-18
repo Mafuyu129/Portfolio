@@ -199,7 +199,7 @@ export const EXPERIENCE_CONTENT = {
     {
       role: "QA Engineer (Intern)",
       company: "Ascend Commerce",
-      icon: "https://www.ascendcorp.com/assets/img/logo-ascend.png",
+      icon: "https://asset.brandfetch.io/idf3X4U1N_/idrYVp1115.png", // More reliable CDN link
       period: "Jan 2026 — Apr 2026",
       details: [
         "Executed end-to-end functional testing for Livestreaming platforms to ensure seamless UI and real-time user experience.",
@@ -214,7 +214,7 @@ export const EXPERIENCE_CONTENT = {
     {
       role: "Software Engineering Student",
       company: "Mae Fah Luang University",
-      icon: "https://www.mfu.ac.th/fileadmin/templates/main/images/logo-mfu.png",
+      icon: "https://upload.wikimedia.org/wikipedia/th/a/a2/Mfu-logo.png", // Wikimedia is very stable for hotlinking
       period: "2022 — 2026",
       desc: "Studying software architecture, web development, and software testing methodologies.",
       badge: "Academy",
