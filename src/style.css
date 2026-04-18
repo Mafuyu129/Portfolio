@@ -1003,23 +1003,35 @@ img {
 .experience-icon {
   width: 44px;
   height: 44px;
-  background: white; /* Light background for company logos to pop */
+  background: var(--bg-surface);
   border: 1px solid var(--border-standard);
-  border-radius: 10px;
+  border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 20px;
   flex-shrink: 0;
+  position: relative;
   overflow: hidden;
-  padding: 4px;
+  box-shadow: 0 0 20px -5px var(--entity-color, var(--brand-indigo));
 }
 
-.experience-logo {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;
+.experience-icon::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--entity-color);
+  opacity: 0.1;
 }
+
+.entity-initials {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--entity-color);
+  letter-spacing: -0.5px;
+  position: relative;
+  z-index: 1;
+}
+
 
 
 .experience-title-group h3 {

@@ -18,12 +18,8 @@ const Experience = () => {
               <div className="timeline-content">
                 <span className={`timeline-badge ${exp.type}`}>{exp.badge}</span>
                 <div className="experience-header">
-                  <div className="experience-icon">
-                    {exp.icon.startsWith('http') ? (
-                      <img src={exp.icon} alt={exp.company} className="experience-logo" />
-                    ) : (
-                      <span>{exp.icon}</span>
-                    )}
+                  <div className="experience-icon" style={{ '--entity-color': exp.color }}>
+                    <span className="entity-initials">{exp.initials}</span>
                   </div>
                   <div className="experience-title-group">
                     <h3>{exp.role}</h3>
