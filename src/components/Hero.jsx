@@ -1,7 +1,9 @@
+import { useState } from 'react';
 import { HERO_CONTENT } from '../constants';
 
 const Hero = () => {
   const { badge, title, role, description, stats, actions, floatingUI } = HERO_CONTENT;
+  const [isPreviewOpen, setIsPreviewOpen] = useState(false);
 
   return (
     <section className="hero" id="hero">
@@ -26,14 +28,24 @@ const Hero = () => {
 
           <div className="hero-actions">
             {actions.map((action) => (
-              <a 
-                key={action.label}
-                href={action.href} 
-                download={action.download}
-                className={`btn ${action.primary ? 'btn-primary' : 'btn-outline'}`}
-              >
-                {action.label}
-              </a>
+              action.type === 'preview' ? (
+                <button 
+                  key={action.label}
+                  onClick={() => setIsPreviewOpen(true)}
+                  className={`btn ${action.primary ? 'btn-primary' : 'btn-outline'}`}
+                >
+                  {action.label}
+                </button>
+              ) : (
+                <a 
+                  key={action.label}
+                  href={action.href} 
+                  download={action.download}
+                  className={`btn ${action.primary ? 'btn-primary' : 'btn-outline'}`}
+                >
+                  {action.label}
+                </a>
+              )
             ))}
           </div>
         </div>
@@ -50,8 +62,37 @@ const Hero = () => {
           </div>
         </div>
       </div>
+
+      {isPreviewOpen && (
+        <div className="modal-overlay" onClick={() => setIsPreviewOpen(false)}>
+          <div className="modal-container resume-modal" onClick={e => e.stopPropagation()}>
+            <button 
+              className="modal-close-btn" 
+              onClick={() => setIsPreviewOpen(false)}
+              aria-label="Close preview"
+            >
+              &times;
+            </button>
+            <div className="modal-header resume">
+              <span className="modal-category">Document</span>
+              <div className="modal-title-wrapper">
+                <span className="modal-icon">📄</span>
+                <h3 className="modal-title">Resume Preview</h3>
+              </div>
+            </div>
+            <div className="modal-body" style={{ padding: 0, overflow: 'hidden', flex: 1 }}>
+              <iframe 
+                src="/resume.pdf#toolbar=0" 
+                className="resume-iframe"
+                title="Resume Preview"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 };
 
 export default Hero;
+

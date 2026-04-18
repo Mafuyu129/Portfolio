@@ -17,8 +17,8 @@ export const HERO_CONTENT = {
     { label: "Location", value: "TH" }
   ],
   actions: [
-    { label: "View Details", href: "#about", primary: true },
-    { label: "Resume", href: "/resume.pdf", download: "CV_Kasidech_Chumthong.pdf" }
+    { label: "View CV", type: "preview", primary: true },
+    { label: "Download", href: "/resume.pdf", download: "CV_Kasidech_Chumthong.pdf", type: "download" }
   ],
   floatingUI: [
     { label: "Test Passed", type: "success" },

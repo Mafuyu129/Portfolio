@@ -1547,3 +1547,31 @@ a.contact-card-value:hover {
   from, to { opacity: 1; }
   50% { opacity: 0; }
 }
+
+/* ====== Resume Modal ====== */
+.resume-modal {
+  max-width: 900px !important;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.resume-iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  background: white;
+  border-radius: 0 0 12px 12px;
+}
+
+.modal-header.resume {
+  background: var(--bg-panel);
+}
+
+@media (max-width: 768px) {
+  .resume-modal {
+    width: 95% !important;
+    height: 85vh;
+  }
+}
+
