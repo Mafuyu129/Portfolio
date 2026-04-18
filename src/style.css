@@ -1003,34 +1003,23 @@ img {
 .experience-icon {
   width: 44px;
   height: 44px;
-  background: var(--bg-surface);
+  background: white; /* Clean white background for logos */
   border: 1px solid var(--border-standard);
-  border-radius: 12px;
+  border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  position: relative;
   overflow: hidden;
-  box-shadow: 0 0 20px -5px var(--entity-color, var(--brand-indigo));
+  padding: 4px;
 }
 
-.experience-icon::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: var(--entity-color);
-  opacity: 0.1;
+.experience-logo {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
 }
 
-.entity-initials {
-  font-size: 14px;
-  font-weight: 700;
-  color: var(--entity-color);
-  letter-spacing: -0.5px;
-  position: relative;
-  z-index: 1;
-}
 
 
 

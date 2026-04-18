@@ -199,8 +199,7 @@ export const EXPERIENCE_CONTENT = {
     {
       role: "QA Engineer (Intern)",
       company: "Ascend Commerce",
-      initials: "AC",
-      color: "#5e6ad2", // Ascend/Indigo
+      icon: "/ascend-logo.jpg",
       period: "Jan 2026 — Apr 2026",
       details: [
         "Executed end-to-end functional testing for Livestreaming platforms to ensure seamless UI and real-time user experience.",
@@ -215,8 +214,7 @@ export const EXPERIENCE_CONTENT = {
     {
       role: "Software Engineering Student",
       company: "Mae Fah Luang University",
-      initials: "MFU",
-      color: "#991b1b", // University Red/Crimson
+      icon: "/mfu-logo.png",
       period: "2022 — 2026",
       desc: "Studying software architecture, web development, and software testing methodologies.",
       badge: "Academy",
