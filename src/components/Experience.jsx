@@ -17,8 +17,13 @@ const Experience = () => {
               <div className="timeline-dot"></div>
               <div className="timeline-content">
                 <span className={`timeline-badge ${exp.type}`}>{exp.badge}</span>
-                <h3>{exp.role}</h3>
-                <h4>{exp.company}</h4>
+                <div className="experience-header">
+                  <span className="experience-icon">{exp.icon}</span>
+                  <div className="experience-title-group">
+                    <h3>{exp.role}</h3>
+                    <h4>{exp.company}</h4>
+                  </div>
+                </div>
                 <div className="timeline-date">{exp.period}</div>
                 {exp.details ? (
                   <ul className="timeline-details">
