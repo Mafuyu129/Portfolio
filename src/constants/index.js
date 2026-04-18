@@ -275,7 +275,7 @@ export const CERTIFICATIONS_CONTENT = {
       issuer: "Google Cloud",
       date: "2025",
       icon: "☁️",
-      link: "https://www.credly.com/users/kasidech-chumthong",
+      link: "/8 KASIDECH CHUMTHONG.pdf",
       featured: true
     },
     {
@@ -284,7 +284,7 @@ export const CERTIFICATIONS_CONTENT = {
       issuer: "Google Cloud",
       date: "2025",
       icon: "♊",
-      link: "https://www.credly.com/users/kasidech-chumthong",
+      link: "https://www.credly.com/badges/5937caa7-dce9-4cfe-807a-1bbeb8bcb5fb",
       featured: true
     },
     {
@@ -293,7 +293,7 @@ export const CERTIFICATIONS_CONTENT = {
       issuer: "Google Cloud",
       date: "2025",
       icon: "🛡️",
-      link: "https://www.credly.com/users/kasidech-chumthong",
+      link: "https://www.credly.com/badges/6a15f5c7-af7f-433f-b885-be2723006326",
       featured: true
     },
     {
@@ -302,7 +302,7 @@ export const CERTIFICATIONS_CONTENT = {
       issuer: "Google Cloud",
       date: "2025",
       icon: "☸️",
-      link: "https://www.credly.com/users/kasidech-chumthong",
+      link: "https://www.credly.com/badges/670ff0a2-f256-4528-8601-dca3db1d056f",
       featured: true
     },
     {
@@ -311,7 +311,7 @@ export const CERTIFICATIONS_CONTENT = {
       issuer: "Google",
       date: "2025",
       icon: "✨",
-      link: "https://www.credly.com/users/kasidech-chumthong",
+      link: "/Coursera2.pdf",
       featured: true
     },
     {
@@ -320,7 +320,7 @@ export const CERTIFICATIONS_CONTENT = {
       issuer: "Google Cloud",
       date: "2025",
       icon: "✍️",
-      link: "https://www.credly.com/users/kasidech-chumthong",
+      link: "https://www.credly.com/badges/3cb61fd3-c657-4df5-b464-be6184b09c3d",
       featured: true
     },
     {
@@ -329,7 +329,7 @@ export const CERTIFICATIONS_CONTENT = {
       issuer: "Google Cloud",
       date: "2025",
       icon: "🏛️",
-      link: "https://www.credly.com/users/kasidech-chumthong"
+      link: "/7 KASIDECH CHUMTHONG.pdf"
     },
     {
       id: "google-marketing",
@@ -337,49 +337,55 @@ export const CERTIFICATIONS_CONTENT = {
       issuer: "Google",
       date: "2025",
       icon: "📈",
-      link: "https://www.credly.com/users/kasidech-chumthong"
+      link: "/Coursera1.pdf"
     },
     {
       id: "gcp-ml-data",
       title: "Prepare Data for ML APIs on Google Cloud",
       issuer: "Google Cloud",
       date: "2025",
-      icon: "📊"
+      icon: "📊",
+      link: "https://www.credly.com/badges/f2a35c72-4a14-4ef8-bc33-3a30cfd45f33"
     },
     {
       id: "gcp-biglake",
       title: "Secure BigLake Data",
       issuer: "Google Cloud",
       date: "2025",
-      icon: "🔒"
+      icon: "🔒",
+      link: "https://www.credly.com/badges/ebbbee25-2e82-416a-aae8-6479b18fe810"
     },
     {
       id: "gcp-dlp",
       title: "Protect Sensitive Data with Data Loss Prevention",
       issuer: "Google Cloud",
       date: "2025",
-      icon: "🕵️"
+      icon: "🕵️",
+      link: "https://www.credly.com/badges/60598e41-8d99-415d-98f2-17b191a6789b"
     },
     {
       id: "gcp-compute-basics",
       title: "The Basics of Google Cloud Compute",
       issuer: "Google Cloud",
       date: "2025",
-      icon: "⚙️"
+      icon: "⚙️",
+      link: "https://www.credly.com/badges/fef700b2-3794-4034-8e5e-288b3b07fc39"
     },
     {
       id: "gcp-speech-api",
       title: "Cloud Speech API: 3 Ways",
       issuer: "Google Cloud",
       date: "2025",
-      icon: "🗣️"
+      icon: "🗣️",
+      link: "https://www.credly.com/badges/c913a953-4a68-4ed8-9a19-9d4d594c1321"
     },
     {
       id: "gcp-data-cloud",
       title: "Share Data Using Google Data Cloud",
       issuer: "Google Cloud",
       date: "2025",
-      icon: "🤝"
+      icon: "☁️",
+      link: "https://www.credly.com/badges/32658fca-3926-460a-9484-4c54a5d1306b"
     }
   ]
 };
