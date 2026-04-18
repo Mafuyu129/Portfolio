@@ -769,14 +769,29 @@ img {
 }
 
 .skill-tag {
-  padding: 4px 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
   background: rgba(255, 255, 255, 0.02);
   border: 1px solid var(--border-standard);
-  border-radius: 4px;
+  border-radius: 6px;
   font-size: 13px;
   font-weight: var(--weight-emphasis);
   color: var(--text-secondary);
+  transition: var(--transition-standard);
 }
+
+.tag-icon {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+}
+
+.tag-emoji {
+  font-size: 14px;
+}
+
 
 .skill-tag:hover {
   background: rgba(255, 255, 255, 0.05);

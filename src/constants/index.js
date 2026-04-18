@@ -68,31 +68,58 @@ export const SKILLS_CONTENT = {
     {
       icon: '💻',
       title: 'Programming Languages',
-      tags: ['JavaScript', 'Python', 'SQL', 'Java', 'C#', 'Dart'],
+      tags: [
+        { name: 'JavaScript', icon: 'https://cdn.simpleicons.org/javascript/F7DF1E' },
+        { name: 'Python', icon: 'https://cdn.simpleicons.org/python/3776AB' },
+        { name: 'SQL', icon: 'https://cdn.simpleicons.org/postgresql/4169E1' },
+        { name: 'Java', icon: 'https://cdn.simpleicons.org/openjdk/ED8B00' },
+        { name: 'C#', icon: 'https://cdn.simpleicons.org/csharp/239120' },
+        { name: 'Dart', icon: 'https://cdn.simpleicons.org/dart/0175C2' }
+      ],
       delay: '0s'
     },
     {
       icon: '🚀',
       title: 'Frameworks / Libraries',
-      tags: ['Playwright', 'Robot Framework', 'Flutter', 'PyTorch'],
+      tags: [
+        { name: 'Playwright', icon: 'https://cdn.simpleicons.org/playwright/2EAD33' },
+        { name: 'Robot Framework', icon: 'https://cdn.simpleicons.org/robotframework/000000' },
+        { name: 'Flutter', icon: 'https://cdn.simpleicons.org/flutter/02569B' },
+        { name: 'PyTorch', icon: 'https://cdn.simpleicons.org/pytorch/EE4C2C' },
+        { name: 'Spring Boot', icon: 'https://cdn.simpleicons.org/springboot/6DB33F' }
+      ],
       delay: '0.1s'
     },
     {
       icon: '🗄️',
       title: 'Databases',
-      tags: ['MySQL', 'MongoDB'],
+      tags: [
+        { name: 'MySQL', icon: 'https://cdn.simpleicons.org/mysql/4479A1' },
+        { name: 'MongoDB', icon: 'https://cdn.simpleicons.org/mongodb/47A248' },
+        { name: 'Firebase', icon: 'https://cdn.simpleicons.org/firebase/FFCA28' }
+      ],
       delay: '0.2s'
     },
     {
       icon: '🛠️',
       title: 'Tools & Platforms',
-      tags: ['JIRA', 'Postman', 'GitHub', 'Figma', 'Firebase'],
+      tags: [
+        { name: 'JIRA', icon: 'https://cdn.simpleicons.org/jira/0052CC' },
+        { name: 'Postman', icon: 'https://cdn.simpleicons.org/postman/FF6C37' },
+        { name: 'GitHub', icon: 'https://cdn.simpleicons.org/github/EEEEEE' },
+        { name: 'Figma', icon: 'https://cdn.simpleicons.org/figma/F24E1E' }
+      ],
       delay: '0.3s'
     },
     {
       icon: '🧠',
       title: 'Soft Skills',
-      tags: ['QA Strategy', 'Agile Methodology', 'Problem Solving', 'Collaboration'],
+      tags: [
+        { name: 'QA Strategy', icon: '🎯' },
+        { name: 'Agile', icon: '🔄' },
+        { name: 'Problem Solving', icon: '🧩' },
+        { name: 'Collaboration', icon: '🤝' }
+      ],
       delay: '0.4s'
     }
   ]

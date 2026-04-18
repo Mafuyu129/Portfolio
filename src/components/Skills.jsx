@@ -23,7 +23,14 @@ const Skills = () => {
               </div>
               <div className="skill-tags">
                 {cat.tags.map(tag => (
-                  <span key={tag} className="skill-tag">{tag}</span>
+                  <span key={tag.name} className="skill-tag">
+                    {tag.icon.startsWith('http') ? (
+                      <img src={tag.icon} alt={tag.name} className="tag-icon" />
+                    ) : (
+                      <span className="tag-emoji">{tag.icon}</span>
+                    )}
+                    {tag.name}
+                  </span>
                 ))}
               </div>
             </div>
