@@ -130,6 +130,28 @@ export const PROJECTS_CONTENT = {
   title: "Featured Projects",
   projects: [
     {
+      id: 6,
+      title: "Amaze Automation (Maestro)",
+      category: "Automation",
+      icon: "🎬",
+      description: "Mobile UI automation for Amaze Super App using Maestro framework.",
+      longDescription: "A comprehensive mobile UI testing suite built with Maestro to automate end-to-end flows for the Amaze Super App, ensuring reliability and performance across different user scenarios.",
+      tech: ["Maestro", "YAML", "Mobile Testing"],
+      link: "https://github.com/Mafuyu129/amaze-ui-automation-Maestro",
+      delay: "0s"
+    },
+    {
+      id: 7,
+      title: "Amaze Automation (Playwright)",
+      category: "Automation",
+      icon: "🎭",
+      description: "Web and Mobile UI automation for Amaze Super App using Playwright.",
+      longDescription: "Automated regression testing suite for the Amaze platform utilizing Playwright. Focused on stabilizing the seller and official account lifecycles through robust script architecture.",
+      tech: ["Playwright", "JavaScript", "Automation"],
+      link: "https://github.com/Mafuyu129/amaze-ui-automation",
+      delay: "0.1s"
+    },
+    {
       id: 1,
       title: "Kin Rai Dee MFU",
       category: "Full Stack",
@@ -138,7 +160,7 @@ export const PROJECTS_CONTENT = {
       longDescription: "Kin Rai Dee MFU is a web application designed to help students discover, review, and rank local restaurants around the Mae Fah Luang University campus. Developed using Spring Boot and MySQL, it features a simple interface for browsing and submitting reviews to build a community-driven dining guide.",
       tech: ["Spring Boot", "MySQL"],
       link: "https://github.com/Kasidech-Chumthong/Online-Food-Delivery-Group-27",
-      delay: "0s"
+      delay: "0.2s"
     },
     {
       id: 2,
@@ -149,7 +171,7 @@ export const PROJECTS_CONTENT = {
       longDescription: "PaKurng is a Flutter-based mobile application designed to provide specialized tools for Buddhist practitioners. The project utilizes Firebase for backend services and focuses on delivering a user-friendly interface to aid in daily spiritual practice.",
       tech: ["Flutter", "Firebase"],
       link: "https://github.com/Kasidech-Chumthong/PaKurng",
-      delay: "0.1s"
+      delay: "0.3s"
     },
     {
       id: 3,
@@ -161,7 +183,7 @@ export const PROJECTS_CONTENT = {
       tech: ["Python", "PyTorch", "Computer Vision"],
       link: "/Land_Cover_Mapping.pdf",
       linkText: "View Research",
-      delay: "0.2s"
+      delay: "0.4s"
     },
     {
       id: 4,
@@ -175,7 +197,7 @@ export const PROJECTS_CONTENT = {
       linkText: "View App",
       secondaryLink: "https://www.canva.com/design/DAGztoR_95U/bI4nUWi8AtNMiokBl6JEsg/edit?utm_content=DAGztoR_95U&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton",
       secondaryLinkText: "View Slides",
-      delay: "0.3s"
+      delay: "0.5s"
     },
     {
       id: 5,
@@ -187,7 +209,7 @@ export const PROJECTS_CONTENT = {
       tech: ["Python", "AI / ML"],
       link: "https://github.com/Mafuyu129/Sentinel-AI-Bot",
       linkText: "GitHub",
-      delay: "0.4s"
+      delay: "0.6s"
     }
   ]
 };
