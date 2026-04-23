@@ -45,4 +45,3 @@ src/
 - **GitHub**: [github.com/Mafuyu129](https://github.com/Mafuyu129)
 
 ---
-Developed with ❤️ by Kasidech Chumthong
