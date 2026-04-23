@@ -1,5 +1,8 @@
 # Kasidech Chumthong | QA Engineer & Developer Portfolio
 
+[🇹🇭 Thai Version](#kasidech-chumthong--พอร์ตโฟลิโอ-qa-engineer--developer)
+
+
 A premium, high-performance portfolio website inspired by the clean, minimalist aesthetic of **Linear.app**. Built with **React** and **Vite**, featuring advanced interactive elements and a focus on software quality.
 
 🚀 **Live Demo**: [https://portfolio-kasidech.vercel.app/](https://portfolio-kasidech.vercel.app/)
@@ -49,6 +52,9 @@ src/
 ---
 
 # Kasidech Chumthong | พอร์ตโฟลิโอ QA Engineer & Developer
+
+[🇺🇸 English Version](#kasidech-chumthong--qa-engineer--developer-portfolio)
+
 
 เว็บไซต์พอร์ตโฟลิโอระดับพรีเมียมที่ได้รับแรงบันดาลใจจากดีไซน์ที่เรียบง่ายและทันสมัยของ **Linear.app** พัฒนาด้วย **React** และ **Vite** โดยเน้นไปที่ประสบการณ์การใช้งานที่ลื่นไหลและความใส่ใจในคุณภาพของซอฟต์แวร์
 
