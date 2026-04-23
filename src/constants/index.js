@@ -135,8 +135,8 @@ export const PROJECTS_CONTENT = {
       category: "Automation",
       icon: "🎬",
       description: "Mobile UI automation for Amaze Super App using Maestro framework.",
-      longDescription: "A comprehensive mobile UI testing suite built with Maestro to automate end-to-end flows for the Amaze Super App, ensuring reliability and performance across different user scenarios.",
-      tech: ["Maestro", "YAML", "Mobile Testing"],
+      longDescription: "A comprehensive mobile UI testing suite built with Maestro to automate end-to-end flows for the Amaze Super App. This project focuses on reliability and performance across different user scenarios, reducing manual testing time by 60% through robust YAML scripts and automated reporting.",
+      tech: ["Maestro", "YAML", "Mobile Automation", "Regression Testing"],
       link: "https://github.com/Mafuyu129/amaze-ui-automation-Maestro",
       delay: "0s"
     },
@@ -146,8 +146,8 @@ export const PROJECTS_CONTENT = {
       category: "Automation",
       icon: "🎭",
       description: "Web and Mobile UI automation for Amaze Super App using Playwright.",
-      longDescription: "Automated regression testing suite for the Amaze platform utilizing Playwright. Focused on stabilizing the seller and official account lifecycles through robust script architecture.",
-      tech: ["Playwright", "JavaScript", "Automation"],
+      longDescription: "Automated regression testing suite for the Amaze platform utilizing Playwright. This project specializes in stabilizing the seller and official account lifecycles through robust script architecture, handling complex UI interactions and real-time data validation.",
+      tech: ["Playwright", "JavaScript", "E2E Testing", "CI/CD"],
       link: "https://github.com/Mafuyu129/amaze-ui-automation",
       delay: "0.1s"
     },
@@ -157,8 +157,8 @@ export const PROJECTS_CONTENT = {
       category: "Full Stack",
       icon: "🍜",
       description: "A restaurant review and ranking web application for university students.",
-      longDescription: "Kin Rai Dee MFU is a web application designed to help students discover, review, and rank local restaurants around the Mae Fah Luang University campus. Developed using Spring Boot and MySQL, it features a simple interface for browsing and submitting reviews to build a community-driven dining guide.",
-      tech: ["Spring Boot", "MySQL"],
+      longDescription: "Kin Rai Dee MFU is a full-stack web application designed for the Mae Fah Luang University community. It streamlines the process of discovering local dining options, featuring a community-driven rating system, real-time reviews, and a robust backend built with Spring Boot.",
+      tech: ["Spring Boot", "MySQL", "Thymeleaf", "RESTful API"],
       link: "https://github.com/Kasidech-Chumthong/Online-Food-Delivery-Group-27",
       delay: "0.2s"
     },

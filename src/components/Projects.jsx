@@ -31,13 +31,15 @@ const Projects = () => {
             >
               <div className="project-header">
                 <span className="project-category">{project.category}</span>
+                <span className="project-status">Verified</span>
               </div>
-              <div className="project-image">
-                <div className="project-image-placeholder">
-                  <span>{project.icon}</span>
+              <div className="project-visual">
+                <div className="project-icon-large">
+                  {project.icon}
                 </div>
-                <div className="project-overlay" style={{ gap: '12px', flexWrap: 'wrap' }}>
-                  <button onClick={() => setSelectedProject(project)} className="project-link-btn" style={{ cursor: 'pointer', border: 'none' }}>
+                <div className="project-visual-bg"></div>
+                <div className="project-overlay">
+                  <button onClick={() => setSelectedProject(project)} className="btn btn-primary btn-sm">
                     View Details
                   </button>
                 </div>
@@ -45,8 +47,15 @@ const Projects = () => {
               <div className="project-content">
                 <h3 className="project-title">{project.title}</h3>
                 <p className="project-desc">{project.description}</p>
-                <div className="project-tech">
-                  {project.tech.map(t => <span key={t}>{t}</span>)}
+                <div className="project-footer">
+                  <div className="project-tech">
+                    {project.tech.slice(0, 2).map(t => <span key={t}>{t}</span>)}
+                    {project.tech.length > 2 && <span className="tech-more">+{project.tech.length - 2}</span>}
+                  </div>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="project-arrow">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
                 </div>
               </div>
             </div>

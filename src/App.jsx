@@ -11,6 +11,7 @@ import Certifications from './components/Certifications';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import BackToTop from './components/BackToTop';
+import CommandPalette from './components/CommandPalette';
 
 function App() {
   const { theme, toggleTheme } = useTheme();
@@ -38,6 +39,7 @@ function App() {
       
       <Footer />
       <BackToTop />
+      <CommandPalette />
     </>
   );
 }
