@@ -30,6 +30,26 @@ const CommandPalette = () => {
       }
     })),
     {
+      id: 'view-cv',
+      title: 'View CV / Resume',
+      desc: 'Open resume PDF in a new tab',
+      icon: '📄',
+      action: () => {
+        window.open('/resume.pdf', '_blank');
+        setIsOpen(false);
+      }
+    },
+    {
+      id: 'view-transcript',
+      title: 'View Transcript',
+      desc: 'Open academic transcript PDF in a new tab',
+      icon: '🎓',
+      action: () => {
+        window.open('/Transcript_Kasidech.pdf', '_blank');
+        setIsOpen(false);
+      }
+    },
+    {
       id: 'theme-toggle',
       title: 'Toggle Theme',
       desc: 'Switch between light and dark mode',

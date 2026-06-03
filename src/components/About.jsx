@@ -27,6 +27,20 @@ const About = () => {
                     {card.description}
                   </div>
                 )}
+                {card.link && (
+                  <div style={{ marginTop: '16px' }}>
+                    <a 
+                      href={card.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn btn-outline btn-sm"
+                      style={{ display: 'inline-flex', alignItems: 'center', gap: '6px' }}
+                    >
+                      <span>📄</span>
+                      {card.linkText || 'View Document'}
+                    </a>
+                  </div>
+                )}
               </div>
             </div>
           ))}

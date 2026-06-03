@@ -3,7 +3,7 @@ import { HERO_CONTENT } from '../constants';
 
 const Hero = () => {
   const { badge, title, role, description, stats, actions, floatingUI } = HERO_CONTENT;
-  const [isPreviewOpen, setIsPreviewOpen] = useState(false);
+  const [previewFile, setPreviewFile] = useState(null); // 'resume' | 'transcript' | null
 
   return (
     <section className="hero" id="hero">
@@ -31,7 +31,7 @@ const Hero = () => {
               action.type === 'preview' ? (
                 <button 
                   key={action.label}
-                  onClick={() => setIsPreviewOpen(true)}
+                  onClick={() => setPreviewFile(action.file || 'resume')}
                   className={`btn ${action.primary ? 'btn-primary' : 'btn-outline'}`}
                 >
                   {action.label}
@@ -63,12 +63,12 @@ const Hero = () => {
         </div>
       </div>
 
-      {isPreviewOpen && (
-        <div className="modal-overlay" onClick={() => setIsPreviewOpen(false)}>
+      {previewFile && (
+        <div className="modal-overlay" onClick={() => setPreviewFile(null)}>
           <div className="modal-container resume-modal" onClick={e => e.stopPropagation()}>
             <button 
               className="modal-close-btn" 
-              onClick={() => setIsPreviewOpen(false)}
+              onClick={() => setPreviewFile(null)}
               aria-label="Close preview"
             >
               &times;
@@ -77,14 +77,16 @@ const Hero = () => {
               <span className="modal-category">Document</span>
               <div className="modal-title-wrapper">
                 <span className="modal-icon">📄</span>
-                <h3 className="modal-title">Resume Preview</h3>
+                <h3 className="modal-title">
+                  {previewFile === 'resume' ? 'Resume Preview' : 'Transcript Preview'}
+                </h3>
               </div>
             </div>
             <div className="modal-body" style={{ padding: 0, overflow: 'hidden', flex: 1 }}>
               <iframe 
-                src="/resume.pdf#toolbar=0" 
+                src={previewFile === 'resume' ? '/resume.pdf#toolbar=0' : '/Transcript_Kasidech.pdf#toolbar=0'} 
                 className="resume-iframe"
-                title="Resume Preview"
+                title={previewFile === 'resume' ? 'Resume Preview' : 'Transcript Preview'}
               ></iframe>
             </div>
           </div>

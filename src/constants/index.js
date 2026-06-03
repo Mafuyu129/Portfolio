@@ -17,8 +17,9 @@ export const HERO_CONTENT = {
     { label: "Location", value: "TH" }
   ],
   actions: [
-    { label: "View CV", type: "preview", primary: true },
-    { label: "Download", href: "/resume.pdf", download: "CV_Kasidech_Chumthong.pdf", type: "download" }
+    { label: "View CV", type: "preview", file: "resume", primary: true },
+    { label: "View Transcript", type: "preview", file: "transcript", primary: false },
+    { label: "Download CV", href: "/resume.pdf", download: "CV_Kasidech_Chumthong.pdf", type: "download" }
   ],
   floatingUI: [
     { label: "Test Passed", type: "success" },
@@ -38,7 +39,9 @@ export const ABOUT_CONTENT = {
       title: "Education & Foundation",
       subtitle: "B.Eng. Software Engineering",
       meta: "Mae Fah Luang University · GPAX 3.33",
-      description: "Studying software quality assurance and practical full-stack development."
+      description: "Studying software quality assurance and practical full-stack development.",
+      link: "/Transcript_Kasidech.pdf",
+      linkText: "View Transcript"
     },
     {
       id: "current",
