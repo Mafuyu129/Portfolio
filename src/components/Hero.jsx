@@ -73,14 +73,26 @@ const Hero = () => {
             >
               &times;
             </button>
-            <div className="modal-header resume">
-              <span className="modal-category">Document</span>
-              <div className="modal-title-wrapper">
-                <span className="modal-icon">📄</span>
-                <h3 className="modal-title">
-                  {previewFile === 'resume' ? 'Resume Preview' : 'Transcript Preview'}
-                </h3>
+            <div className="modal-header resume" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+              <div>
+                <span className="modal-category">Document</span>
+                <div className="modal-title-wrapper">
+                  <span className="modal-icon">📄</span>
+                  <h3 className="modal-title">
+                    {previewFile === 'resume' ? 'Resume Preview' : 'Transcript Preview'}
+                  </h3>
+                </div>
               </div>
+              <a 
+                href={previewFile === 'resume' ? '/resume.pdf' : '/Transcript_Kasidech.pdf'} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="btn btn-outline btn-sm"
+                style={{ marginRight: '40px', fontSize: '12px', display: 'flex', alignItems: 'center', gap: '4px' }}
+              >
+                <span>Open in New Tab</span>
+                <span>↗</span>
+              </a>
             </div>
             <div className="modal-body" style={{ padding: 0, overflow: 'hidden', flex: 1 }}>
               <iframe 
