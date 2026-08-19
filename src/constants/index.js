@@ -454,7 +454,7 @@ const DICTIONARY = {
       badge: "Open to Full-Time Opportunities",
       title: "Kasidech Chumthong",
       role: "QA Engineer & Developer",
-      description: "A Software Engineering graduate passionate about software testing, quality assurance, and building reliable applications. Experienced in test automation, QA methodologies, and full-stack development.",
+      description: "Software Engineering graduate with practical QA experience at Ascend Commerce Group, specializing in manual, API, and SQL testing. Proven track record in developing test automation scripts using JavaScript and Playwright to improve test efficiency and ensure software reliability.",
       stats: [
         { label: "Degree", value: "B.Eng. SE" },
         { label: "Status", value: "Open to Work" },
