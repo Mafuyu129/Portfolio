@@ -1,7 +1,9 @@
-import { CONTACT_CONTENT } from '../constants';
+import { useLanguage } from '../context/LanguageContext';
+import { getContactContent } from '../constants';
 
 const Contact = () => {
-  const { tag, title, info } = CONTACT_CONTENT;
+  const { language } = useLanguage();
+  const { tag, title, info } = getContactContent(language);
 
   return (
     <section className="section" id="contact">
@@ -17,7 +19,7 @@ const Contact = () => {
               <div className="contact-card-icon">{item.icon}</div>
               <h3>{item.label}</h3>
               {item.href ? (
-                <a href={item.href} className="contact-card-value" target={item.label === 'LinkedIn' ? '_blank' : undefined} rel={item.label === 'LinkedIn' ? 'noopener noreferrer' : undefined}>
+                <a href={item.href} className="contact-card-value" target={item.label.includes('LinkedIn') ? '_blank' : undefined} rel={item.label.includes('LinkedIn') ? 'noopener noreferrer' : undefined}>
                   {item.value}
                 </a>
               ) : (

@@ -1,8 +1,11 @@
 import { useState } from 'react';
-import { HERO_CONTENT } from '../constants';
+import { useLanguage } from '../context/LanguageContext';
+import { getHeroContent, getUiTranslations } from '../constants';
 
 const Hero = () => {
-  const { badge, title, role, description, stats, actions, floatingUI } = HERO_CONTENT;
+  const { language } = useLanguage();
+  const { badge, title, role, description, stats, actions, floatingUI } = getHeroContent(language);
+  const ui = getUiTranslations(language);
   const [previewFile, setPreviewFile] = useState(null); // 'resume' | 'transcript' | null
 
   return (
@@ -53,10 +56,10 @@ const Hero = () => {
         <div className="hero-visual reveal-up">
           <div className="hero-image-wrapper">
             <img src="/profile.jpg" alt={title} className="hero-image" id="heroImage" />
-            {floatingUI.map((ui, idx) => (
-              <div key={ui.label} className={`floating-ui ui-${idx + 1}`}>
-                <span className={`ui-dot ${ui.type}`}></span>
-                {ui.label}
+            {floatingUI.map((uiItem, idx) => (
+              <div key={uiItem.label} className={`floating-ui ui-${idx + 1}`}>
+                <span className={`ui-dot ${uiItem.type}`}></span>
+                {uiItem.label}
               </div>
             ))}
           </div>
@@ -75,11 +78,11 @@ const Hero = () => {
             </button>
             <div className="modal-header resume" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
               <div>
-                <span className="modal-category">Document</span>
+                <span className="modal-category">{ui.document}</span>
                 <div className="modal-title-wrapper">
                   <span className="modal-icon">📄</span>
                   <h3 className="modal-title">
-                    {previewFile === 'resume' ? 'Resume Preview' : 'Transcript Preview'}
+                    {previewFile === 'resume' ? ui.resumePreview : ui.transcriptPreview}
                   </h3>
                 </div>
               </div>
@@ -90,7 +93,7 @@ const Hero = () => {
                 className="btn btn-outline btn-sm"
                 style={{ marginRight: '40px', fontSize: '12px', display: 'flex', alignItems: 'center', gap: '4px' }}
               >
-                <span>Open in New Tab</span>
+                <span>{ui.openInNewTab}</span>
                 <span>↗</span>
               </a>
             </div>
@@ -98,7 +101,7 @@ const Hero = () => {
               <iframe 
                 src={previewFile === 'resume' ? '/resume.pdf#toolbar=0' : '/Transcript_Kasidech.pdf#toolbar=0'} 
                 className="resume-iframe"
-                title={previewFile === 'resume' ? 'Resume Preview' : 'Transcript Preview'}
+                title={previewFile === 'resume' ? ui.resumePreview : ui.transcriptPreview}
               ></iframe>
             </div>
           </div>
@@ -109,4 +112,3 @@ const Hero = () => {
 };
 
 export default Hero;
-

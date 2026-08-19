@@ -1,8 +1,11 @@
 import { useState, useEffect } from 'react';
-import { PROJECTS_CONTENT } from '../constants';
+import { useLanguage } from '../context/LanguageContext';
+import { getProjectsContent, getUiTranslations } from '../constants';
 
 const Projects = () => {
-  const { tag, title, projects } = PROJECTS_CONTENT;
+  const { language } = useLanguage();
+  const { tag, title, projects } = getProjectsContent(language);
+  const ui = getUiTranslations(language);
   const [selectedProject, setSelectedProject] = useState(null);
 
   // Prevent background scrolling when modal is open
@@ -31,7 +34,7 @@ const Projects = () => {
             >
               <div className="project-header">
                 <span className="project-category">{project.category}</span>
-                <span className="project-status">Verified</span>
+                <span className="project-status">{ui.verified}</span>
               </div>
               <div className="project-visual">
                 <div className="project-icon-large">
@@ -40,7 +43,7 @@ const Projects = () => {
                 <div className="project-visual-bg"></div>
                 <div className="project-overlay">
                   <button onClick={() => setSelectedProject(project)} className="btn btn-primary btn-sm">
-                    View Details
+                    {ui.viewDetails}
                   </button>
                 </div>
               </div>
@@ -100,7 +103,7 @@ const Projects = () => {
                 )}
                 {selectedProject.link === '#' && !selectedProject.secondaryLink && (
                   <span className="btn btn-outline" style={{ opacity: 0.5, cursor: 'not-allowed' }}>
-                    Private / Research
+                    {language === 'th' ? 'ผลงานวิจัย / งานภายใน' : 'Private / Research'}
                   </span>
                 )}
               </div>

@@ -1,7 +1,9 @@
-import { SKILLS_CONTENT } from '../constants';
+import { useLanguage } from '../context/LanguageContext';
+import { getSkillsContent } from '../constants';
 
 const Skills = () => {
-  const { tag, title, categories } = SKILLS_CONTENT;
+  const { language } = useLanguage();
+  const { tag, title, categories } = getSkillsContent(language);
 
   return (
     <section className="section section-alt" id="skills">
@@ -22,14 +24,14 @@ const Skills = () => {
                 <h3>{cat.title}</h3>
               </div>
               <div className="skill-tags">
-                {cat.tags.map(tag => (
-                  <span key={tag.name} className="skill-tag">
-                    {tag.icon.startsWith('http') ? (
-                      <img src={tag.icon} alt={tag.name} className="tag-icon" />
+                {cat.tags.map(skillTag => (
+                  <span key={skillTag.name} className="skill-tag">
+                    {skillTag.icon.startsWith('http') ? (
+                      <img src={skillTag.icon} alt={skillTag.name} className="tag-icon" />
                     ) : (
-                      <span className="tag-emoji">{tag.icon}</span>
+                      <span className="tag-emoji">{skillTag.icon}</span>
                     )}
-                    {tag.name}
+                    {skillTag.name}
                   </span>
                 ))}
               </div>

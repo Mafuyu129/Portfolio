@@ -1,6 +1,7 @@
 import { useTheme } from './hooks/useTheme';
 import { useShineEffect } from './hooks/useShine';
 import { useReveal } from './hooks/useReveal';
+import { LanguageProvider } from './context/LanguageContext';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -13,7 +14,7 @@ import Footer from './components/Footer';
 import BackToTop from './components/BackToTop';
 import CommandPalette from './components/CommandPalette';
 
-function App() {
+function AppContent() {
   const { theme, toggleTheme } = useTheme();
   
   // Initialize interactive effects
@@ -41,6 +42,14 @@ function App() {
       <BackToTop />
       <CommandPalette />
     </>
+  );
+}
+
+function App() {
+  return (
+    <LanguageProvider>
+      <AppContent />
+    </LanguageProvider>
   );
 }
 

@@ -1,7 +1,9 @@
-import { EXPERIENCE_CONTENT } from '../constants';
+import { useLanguage } from '../context/LanguageContext';
+import { getExperienceContent } from '../constants';
 
 const Experience = () => {
-  const { tag, title, experiences } = EXPERIENCE_CONTENT;
+  const { language } = useLanguage();
+  const { tag, title, experiences } = getExperienceContent(language);
 
   return (
     <section className="section section-alt" id="experience">

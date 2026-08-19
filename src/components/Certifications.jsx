@@ -1,8 +1,10 @@
 import { useState } from 'react';
-import { CERTIFICATIONS_CONTENT } from '../constants';
+import { useLanguage } from '../context/LanguageContext';
+import { getCertificationsContent } from '../constants';
 
 const Certifications = () => {
-  const { tag, title, certifications } = CERTIFICATIONS_CONTENT;
+  const { language } = useLanguage();
+  const { tag, title, showAll, showLess, verify, certifications } = getCertificationsContent(language);
   const [isExpanded, setIsExpanded] = useState(false);
 
   // Show first 6 by default
@@ -40,7 +42,7 @@ const Certifications = () => {
                   rel="noopener noreferrer"
                   className="cert-verify-link"
                 >
-                  Verify
+                  {verify || (language === 'th' ? 'ตรวจสอบ' : 'Verify')}
                   <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <line x1="7" y1="17" x2="17" y2="7"></line>
                     <polyline points="7 7 17 7 17 17"></polyline>
@@ -56,7 +58,9 @@ const Certifications = () => {
             className="btn btn-secondary" 
             onClick={() => setIsExpanded(!isExpanded)}
           >
-            {isExpanded ? 'Show Less' : `Show All Badges (${certifications.length})`}
+            {isExpanded 
+              ? (showLess || 'Show Less') 
+              : `${showAll || 'Show All Badges'} (${certifications.length})`}
           </button>
         </div>
       </div>

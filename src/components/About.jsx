@@ -1,7 +1,9 @@
-import { ABOUT_CONTENT } from '../constants';
+import { useLanguage } from '../context/LanguageContext';
+import { getAboutContent } from '../constants';
 
 const About = () => {
-  const { tag, title, cards } = ABOUT_CONTENT;
+  const { language } = useLanguage();
+  const { tag, title, cards } = getAboutContent(language);
 
   return (
     <section className="section" id="about">
@@ -37,7 +39,7 @@ const About = () => {
                       style={{ display: 'inline-flex', alignItems: 'center', gap: '6px' }}
                     >
                       <span>📄</span>
-                      {card.linkText || 'View Document'}
+                      {card.linkText || (language === 'th' ? 'ดูเอกสาร' : 'View Document')}
                     </a>
                   </div>
                 )}

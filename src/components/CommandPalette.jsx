@@ -1,26 +1,32 @@
 import { useState, useEffect, useRef } from 'react';
-import { NAV_LINKS, PROJECTS_CONTENT } from '../constants';
+import { useLanguage } from '../context/LanguageContext';
+import { getNavLinks, getProjectsContent, getUiTranslations } from '../constants';
 
 const CommandPalette = () => {
+  const { language, toggleLanguage } = useLanguage();
+  const navLinks = getNavLinks(language);
+  const { projects } = getProjectsContent(language);
+  const ui = getUiTranslations(language);
+
   const [isOpen, setIsOpen] = useState(false);
   const [search, setSearch] = useState('');
   const [activeIndex, setActiveIndex] = useState(0);
   const inputRef = useRef(null);
 
   const commands = [
-    ...NAV_LINKS.map(link => ({
+    ...navLinks.map(link => ({
       id: link.href,
-      title: `Go to ${link.name}`,
-      desc: `Navigate to the ${link.name.toLowerCase()} section`,
+      title: `${ui.navTo} ${link.name}`,
+      desc: `${ui.navTo} ${link.name}`,
       icon: '🔗',
       action: () => {
         window.location.href = link.href;
         setIsOpen(false);
       }
     })),
-    ...PROJECTS_CONTENT.projects.map(project => ({
+    ...projects.map(project => ({
       id: `project-${project.id}`,
-      title: `View ${project.title}`,
+      title: `${ui.viewProject} ${project.title}`,
       desc: project.category,
       icon: project.icon,
       action: () => {
@@ -31,8 +37,8 @@ const CommandPalette = () => {
     })),
     {
       id: 'view-cv',
-      title: 'View CV / Resume',
-      desc: 'Open resume PDF in a new tab',
+      title: language === 'th' ? 'ดูเรซูเม่ (CV / Resume)' : 'View CV / Resume',
+      desc: language === 'th' ? 'เปิดไฟล์เรซูเม่ในแท็บใหม่' : 'Open resume PDF in a new tab',
       icon: '📄',
       action: () => {
         window.open('/resume.pdf', '_blank');
@@ -41,8 +47,8 @@ const CommandPalette = () => {
     },
     {
       id: 'view-transcript',
-      title: 'View Transcript',
-      desc: 'Open academic transcript PDF in a new tab',
+      title: language === 'th' ? 'ดูทรานสคริปต์ (Transcript)' : 'View Academic Transcript',
+      desc: language === 'th' ? 'เปิดไฟล์ทรานสคริปต์ในแท็บใหม่' : 'Open academic transcript PDF in a new tab',
       icon: '🎓',
       action: () => {
         window.open('/Transcript_Kasidech.pdf', '_blank');
@@ -50,9 +56,19 @@ const CommandPalette = () => {
       }
     },
     {
+      id: 'toggle-lang',
+      title: language === 'th' ? 'Switch Language to English (EN)' : 'เปลี่ยนเป็นภาษาไทย (TH)',
+      desc: language === 'th' ? 'สลับภาษาของเว็บไซต์เป็นภาษาอังกฤษ' : 'Switch website language to Thai',
+      icon: '🌐',
+      action: () => {
+        toggleLanguage();
+        setIsOpen(false);
+      }
+    },
+    {
       id: 'theme-toggle',
-      title: 'Toggle Theme',
-      desc: 'Switch between light and dark mode',
+      title: ui.toggleTheme,
+      desc: language === 'th' ? 'สลับระหว่างธีมมืดและสว่าง' : 'Switch between light and dark mode',
       icon: '🌓',
       action: () => {
         const btn = document.querySelector('.theme-toggle');
@@ -127,7 +143,7 @@ const CommandPalette = () => {
             ref={inputRef}
             type="text" 
             className="command-input" 
-            placeholder="Type a command or search..." 
+            placeholder={ui.searchPlaceholder} 
             value={search}
             onChange={e => setSearch(e.target.value)}
             onKeyDown={handleKeyDown}
@@ -153,16 +169,16 @@ const CommandPalette = () => {
             ))
           ) : (
             <div style={{ padding: '32px', textAlign: 'center', color: 'var(--text-tertiary)', fontSize: '14px' }}>
-              No commands found.
+              {ui.noCommands}
             </div>
           )}
         </div>
         
         <div className="command-footer">
           <div className="command-hints">
-            <div className="command-hint"><kbd>↑↓</kbd> <span>Navigate</span></div>
-            <div className="command-hint"><kbd>↵</kbd> <span>Select</span></div>
-            <div className="command-hint"><kbd>esc</kbd> <span>Close</span></div>
+            <div className="command-hint"><kbd>↑↓</kbd> <span>{ui.navKbd}</span></div>
+            <div className="command-hint"><kbd>↵</kbd> <span>{ui.selectKbd}</span></div>
+            <div className="command-hint"><kbd>esc</kbd> <span>{ui.closeKbd}</span></div>
           </div>
           <div>Linear Portfolio v1.0</div>
         </div>
